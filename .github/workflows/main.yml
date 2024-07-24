@@ -22,7 +22,7 @@ jobs:
         run: dotnet restore ./WebApplication.sln
         
       - name: Build
-        run: dotnet build ./WebApplication.sln --configuration
+        run: dotnet build ./WebApplication.sln --configuration Release
         
       - name: Publish
-        run: dotnet publish ./WebApplication.sln --configuration 
+        run: dotnet publish ./WebApplication.sln --configuration Release
