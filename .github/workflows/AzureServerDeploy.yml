@@ -26,3 +26,12 @@ jobs:
         azPSVersion: "latest"
         inlineScript: |
           Get-AzWebApp
+
+    - name: Checkout source code
+      uses: actions/checkout@v2
+
+    - name: Set up dotnet
+      uses: actions/setup-dotnet@v1
+    
+    - name: Build
+      run: dotnet build
