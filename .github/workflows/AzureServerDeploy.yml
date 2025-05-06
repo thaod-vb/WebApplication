@@ -14,14 +14,4 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: Checkout source code
-        uses: actions/checkout@v2
-
-      - name: Deploy ARM Template
-        uses: azure/CLI@v1
-        with:
-          inlineScript: |
-            az deployment group create \
-            --name StorageAccountDeployment \
-            --resource-group savdevgithubdeploy \
-            --template-file armtemplates/storageaccount.json \
-            --parameters storageAccountType=Standard_GRS
+        uses: actions/checkout@v2      
